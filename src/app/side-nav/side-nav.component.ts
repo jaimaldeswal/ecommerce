@@ -26,6 +26,10 @@ export class SideNavComponent implements OnInit {
       rebook: [''],
       nike: [''],
       adidas: [''],
+      year2020: [''],
+      year2021: [''],
+      shoes: [''],
+      shirt: [''],
     })
     this.productService.toggleSideBarSubject
       .subscribe((value: any) => {

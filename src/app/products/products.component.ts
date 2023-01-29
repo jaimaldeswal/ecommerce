@@ -102,22 +102,54 @@ export class ProductsComponent implements OnInit {
         filterdProduct = filterdProduct.filter(el => el.size == data.size)
       }
       let brandFilter = ''
-      let flag = false;
+      let brandflag = false;
       if (data.rebook) {
-        flag = true
+        brandflag = true
         brandFilter += brandFilter + ' rebook '
 
       }
       if (data.nike) {
-        flag = true
+        brandflag = true
         brandFilter += brandFilter + ' nike '
       }
       if (data.adidas) {
-        flag = true
+        brandflag = true
         brandFilter += brandFilter + ' adidas '
       }
-      if (flag) {
+      if (brandflag) {
         filterdProduct = filterdProduct.filter(el => brandFilter.includes(el.brand))
+
+      }
+      let yearFilter = ''
+      let yearflag = false;
+      if (data.year2020) {
+        yearflag = true
+        yearFilter += yearFilter + ' 2020 '
+
+      }
+      if (data.year2021) {
+        yearflag = true
+        yearFilter += yearFilter + ' 2021 '
+      }
+
+      if (yearflag) {
+        filterdProduct = filterdProduct.filter(el => yearFilter.includes(el.year))
+
+      }
+      let categoryFilter = ''
+      let categoryflag = false;
+      if (data.shoes) {
+        categoryflag = true
+        categoryFilter += categoryFilter + ' shoes '
+
+      }
+      if (data.shirt) {
+        categoryflag = true
+        categoryFilter += categoryFilter + ' shirt '
+      }
+
+      if (categoryflag) {
+        filterdProduct = filterdProduct.filter(el => categoryFilter.includes(el.category))
 
       }
       this.currentProduct = filterdProduct;
