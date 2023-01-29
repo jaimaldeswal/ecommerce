@@ -1,0 +1,10 @@
+<h3 mat-dialog-title>Confirm Deletion </h3>
+<mat-dialog-content>
+    <mat-label>{{headline}} You can't undo this action.</mat-label>
+</mat-dialog-content>
+<div>
+
+    <mat-dialog-actions align="end" class="dialog-footer">
+        <button mat-button mat-dialog-close>Cancel</button>
+        <button mat-button [mat-dialog-close]="true" (click)="onSubmit()" cdkFocusInitial>Delete</button>
+    </mat-dialog-actions>

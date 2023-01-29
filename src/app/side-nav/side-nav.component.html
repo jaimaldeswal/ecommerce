@@ -1,0 +1,44 @@
+<mat-sidenav-container class="side-nav-content">
+    <mat-sidenav #sidenav mode="side" style="width: 250px;">
+        <form [formGroup]="filterForm" (ngSubmit)="onFilterSubmit()" class="filterForm">
+            <div>
+                <mat-label>Price</mat-label>
+                <div class="price-input display-flex-space">
+                    <input formControlName="priceMin" placeholder="Min." type="number">
+                    <input formControlName="priceMax" placeholder="Max." type="number">
+                </div>
+
+
+
+            </div>
+            <div>
+                <mat-label>Size</mat-label>
+                <div>
+                    <mat-radio-group class="radio-group" formControlName="size" aria-label="Select an option">
+                        <mat-radio-button value="small"> S </mat-radio-button>
+                        <mat-radio-button value="medium"> M </mat-radio-button>
+                        <mat-radio-button value="large"> L </mat-radio-button>
+                        <mat-radio-button value="extra-large"> XL </mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+            </div>
+
+            <div>
+                <mat-label>Brand</mat-label>
+                <p><mat-checkbox formControlName="rebook">Rebook</mat-checkbox></p>
+                <p><mat-checkbox formControlName="nike">Nike</mat-checkbox></p>
+                <p><mat-checkbox formControlName="adidas">Adidas</mat-checkbox></p>
+
+
+            </div>
+            <div class="display-flex-space">
+                <button type="button" (click)="clearFilter()" mat-button>Clear Filter</button>
+                <button type="submit" mat-button color="primary">Filter</button>
+            </div>
+
+        </form>
+    </mat-sidenav>
+    <!-- <mat-sidenav-content>
+         </mat-sidenav-content> -->
+</mat-sidenav-container>

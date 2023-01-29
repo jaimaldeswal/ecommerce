@@ -1,0 +1,24 @@
+<!-- <mat-sidenav-content>
+         </mat-sidenav-content> -->
+<p *ngIf="productService.currentToggle==false"><button mat-button (click)="togglesidenav()">Filter</button></p>
+<p *ngIf="productService.currentToggle ==true"><button mat-button (click)="togglesidenav()">Close</button></p>
+<div *ngFor="let product of currentProduct; let i = index" class="product-card">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title style="cursor: pointer;" (click)="productDetails(i)">{{product.name}}</mat-card-title>
+            <mat-card-subtitle>{{product.year}}</mat-card-subtitle>
+        </mat-card-header>
+        <img style="margin: auto;" mat-card-image (click)="productDetails(i)" src="{{product.image}}"
+            alt="{{product.name}}">
+
+        <mat-card-content class="card-content">
+            <p>
+                <b>Brand: </b>{{product.brand }}
+            </p>
+            <p><b>Price:</b> {{product.price |currency }}</p>
+            <p>
+                <i class="material-icons" (click)="onDelete(i)">delete</i>
+            </p>
+        </mat-card-content>
+    </mat-card>
+</div>

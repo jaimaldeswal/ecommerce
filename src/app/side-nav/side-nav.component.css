@@ -1,0 +1,27 @@
+.side-nav-content {
+    height: 800px;
+    width: auto;
+}
+
+.filterForm div {
+    margin: 6px;
+}
+
+.filterForm {
+    margin: 6px;
+}
+
+.radio-group mat-radio-button {
+    margin: 4px;
+
+}
+
+.price-input input {
+    width: 100px;
+    margin: 4px;
+}
+
+.display-flex-space {
+    display: flex;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,25 @@
+<h3 mat-dialog-title>Product Detail </h3>
+<mat-dialog-content class="dialog-content">
+    <h2><mat-label>{{product.name}}</mat-label></h2>
+
+    <img src="{{product.image}}" alt="{{product.name}}">
+
+    <div class="product-details">
+        <p><b>Category:</b> {{product.category }}</p>
+        <p>
+            <b>Brand: </b>{{product.brand }}
+        </p>
+        <p><b>Size:</b> {{product.size }}</p>
+        <p><b>Year:</b> {{product.year }}</p>
+
+        <p><b>Price:</b> {{product.price |currency }}</p>
+
+    </div>
+</mat-dialog-content>
+<div>
+
+    <mat-dialog-actions align="end" class="dialog-footer">
+        <button mat-dialog-close>Cancel</button>
+        <button mat-button [mat-dialog-close]="true" mat-dialog-close cdkFocusInitial>Add to Cart</button>
+        <button mat-button (click)="onDelete()">Delete </button>
+    </mat-dialog-actions>

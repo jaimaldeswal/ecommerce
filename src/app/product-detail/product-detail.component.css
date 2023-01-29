@@ -1,0 +1,19 @@
+.dialog-footer button {
+    margin: 6px;
+
+}
+
+.product-details {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 12px;
+}
+
+.dialog-content img {
+    height: 250px;
+    width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}

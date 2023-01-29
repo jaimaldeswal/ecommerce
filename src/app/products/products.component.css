@@ -1,0 +1,28 @@
+.product-card {
+    display: inline-block;
+    width: 260px;
+    margin: 4px;
+    height: 400px;
+
+}
+
+
+
+
+.product-card img {
+    max-width: 200px;
+    max-height: 200px;
+    cursor: pointer;
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 12px;
+
+}
+
+
+.card-content p i {
+    cursor: pointer;
+}
